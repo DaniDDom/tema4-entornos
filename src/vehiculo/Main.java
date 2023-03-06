@@ -8,28 +8,32 @@ package vehiculo;
 public class Main {
     
       public static void main(String[] args) {
-        VehiculoXXX2223 miVehiculoXXX2223;
+        VehiculoDDD2223 miVehiculoDDD2223;
         int stockActual;
         
-        miVehiculoXXX2223 = new VehiculoXXX2223("Seat",18000,100);
-        try 
+        miVehiculoDDD2223 = new VehiculoDDD2223("Seat",18000,100);
+        operativaVehiculosDDD2223(miVehiculoDDD2223, 50); 
+    }
+
+    public static void operativaVehiculosDDD2223(VehiculoDDD2223 miVehiculoDDD2223, int cantidad) {
+        int stockActual;
+        try
         {
             System.out.println("Venta de Vehiculos");
-            miVehiculoXXX2223.vender(20);
+            miVehiculoDDD2223.vender(20);
         } catch (Exception e)
         {
             System.out.print("Fallo al vender");
         }
-        
         try
         {
             System.out.println("Compra de Vehiculos");
-            miVehiculoXXX2223.comprar(100);
+            miVehiculoDDD2223.comprar(100);
         } catch (Exception e)
         {
             System.out.print("Fallo al comprar");
         }
-        stockActual = miVehiculoXXX2223.obtenerStock();
+        stockActual = miVehiculoDDD2223.obtenerStock();
         System.out.println("El stock actual es "+ stockActual );
     }
 
