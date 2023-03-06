@@ -3,7 +3,7 @@ package vehiculo;
 
 /**
  *
- * @author 
+ * @author Dani Dom
  */
 public class Main {
     
