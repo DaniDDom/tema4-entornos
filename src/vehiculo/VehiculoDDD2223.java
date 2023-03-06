@@ -8,56 +8,56 @@ package vehiculo;
 public class VehiculoDDD2223 {
 
     /**
-     * @return the nombre
+     * @return Nos devuelve una cadena con lo indicado.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre Indicamos el nombre.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the precio
+     * @return nos devuelve el precio.
      */
     public double getPrecio() {
         return precio;
     }
 
     /**
-     * @param precio the precio to set
+     * @param precio indicamos el precio.
      */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
     /**
-     * @return the precioIVA
+     * @return devuelve el IVA del precio.
      */
     public double getPrecioIVA() {
         return precioIVA;
     }
 
     /**
-     * @param precioIVA the precioIVA to set
+     * @param precioIVA indicamos el IVA del precio.
      */
     public void setPrecioIVA(double precioIVA) {
         this.precioIVA = precioIVA;
     }
 
     /**
-     * @return the stock
+     * @return devuelve el inventario.
      */
     public int getStock() {
         return stock;
     }
 
     /**
-     * @param stock the stock to set
+     * @param stock indicamos el inventario.
      */
     public void setStock(int stock) {
         this.stock = stock;
@@ -68,46 +68,63 @@ public class VehiculoDDD2223 {
     private double precioIVA;
     private int stock;
 
-    /* Constructor sin argumentos */
+    /**
+     * Constructor sin argumentos 
+     */
     public VehiculoDDD2223 ()
     {
     }
-    // Constructor con parámetro para iniciar todas las propiedades de la clase
     
-    
+    /**
+     * Constructor con parámetro para iniciar todas las propiedades de la clase
+     */ 
     public VehiculoDDD2223 (String nom, double precio, int stock)
     {
         this.nombre =nom;
         this.precio=precio;
         this.stock=stock;
     }
-   // Método para asignar el nombre del vehiculo
+   /**
+    * metodo para asignar el nombre pasandolo como parametro.
+    * @param nom el nombre a asignar
+    */
     public void asignarNombre(String nom)
     {
         setNombre(nom);
     }
-    // Método que me devuelve el nombre del vehiculo
+       /**
+     * @return Nos devuelve el nombre.
+     */
     public String obtenerNombre()
     {
         return getNombre();
     }
 
-    // Método que me devuelve el stock de vehiculos disponible en cada momento
+    /**
+     * Metodo que nos devuelve el stock
+     * @return 
+     */
      public int obtenerStock ()
     {
         return getStock();
     }
 
-    /* Método para comprar vehiculos. Modifica el stock.
-     * Este método va a ser probado con Junit
-     */
+   /**
+    * Metodo que compra la cantidad indicada de vehiculos
+    * @param cantidad nº de vehiculos a comprar
+    * @throws Exception 
+    */
     public void comprar(int cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede comprar un nº negativo de vehiculos");
         setStock(getStock() + cantidad);
     }
-
+/**
+ * Metodo que vende la cantidad indicada de vehiculos.
+ * @param cantidad nº de vehiculos a vender.
+ * @throws Exception 
+ */
     public void vender (int cantidad) throws Exception
     {
         if (cantidad <= 0)

@@ -15,6 +15,12 @@ public class Main {
         operativaVehiculosDDD2223(miVehiculoDDD2223, 50); 
     }
 
+      /**
+       * 
+       * @param miVehiculoDDD2223 el objeto que se le pasa.
+       * @param cantidad  la cantidad.
+       */
+      
     public static void operativaVehiculosDDD2223(VehiculoDDD2223 miVehiculoDDD2223, int cantidad) {
         int stockActual;
         try
